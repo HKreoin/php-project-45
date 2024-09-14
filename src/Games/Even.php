@@ -1,25 +1,25 @@
 <?php
 
-namespace BrainGames\EvenGame;
+namespace BrainGames\Even;
 
 use function cli\line;
 use function cli\prompt;
+use function BrainGames\Engine\check;
 
-function run($name)
+function run($name):bool
 {
     line('Answer "yes" if the number is even, otherwise answer "no".');
-    for ($i = 0; $i < 3; $i++) {
+    $questionCount = 3;
+    for ($i = 0; $i < $questionCount; $i++) {
         $randomNum = random_int(1, 100);
         $even = $randomNum % 2;
         $correctAnswer = $even === 0 ? 'yes' : 'no';
         line("Question: {$randomNum}");
         $answer = prompt("Your answer: ");
-        if ($correctAnswer === $answer) {
-            line("Correct!");
-        } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
-            return;
+        $check = check($answer, $correctAnswer, $name);
+        if(!$check) {
+            return false;
         }
     }
-    line("Congratulations, {$name}!");
+    return true;
 }
