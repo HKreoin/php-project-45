@@ -8,3 +8,5 @@
 [![asciicast](https://asciinema.org/a/EyqULVvlJuclM64s4L7MP3gsm.svg)](https://asciinema.org/a/EyqULVvlJuclM64s4L7MP3gsm)
 ## GCD game
 [![asciicast](https://asciinema.org/a/RIjU7dku4IB7wrsJvztD9gJ84.svg)](https://asciinema.org/a/RIjU7dku4IB7wrsJvztD9gJ84)
+## Progression game
+[![asciicast](https://asciinema.org/a/GIAYJZre3bWmCJodZSvb60VHK.svg)](https://asciinema.org/a/GIAYJZre3bWmCJodZSvb60VHK)
