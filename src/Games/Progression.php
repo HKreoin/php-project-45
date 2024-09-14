@@ -5,7 +5,7 @@ namespace BrainGames\Progression;
 use function cli\line;
 use function BrainGames\Engine\check;
 
-function run($name): bool
+function run(string $name): bool
 {
     line("What number is missing in the progression?");
     $questionCount = 3;

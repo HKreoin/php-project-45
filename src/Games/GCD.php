@@ -5,7 +5,7 @@ namespace BrainGames\GCD;
 use function cli\line;
 use function BrainGames\Engine\check;
 
-function run($name): bool
+function run(string $name): bool
 {
     line('Find the greatest common divisor of given numbers.');
     $questionCount = 3;
@@ -25,7 +25,7 @@ function run($name): bool
     return true;
 }
 
-function gcd($num1, $num2): int
+function gcd(int $num1, int $num2): int
 {
     $end =  $num1 < $num2 ? $num1 : $num2;
 

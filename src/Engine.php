@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function check($question, $correctAnswer): bool
+function check(string $question, string $correctAnswer): bool
 {
     line("Question: {$question}");
     $answer = prompt("Your answer: ");

@@ -5,7 +5,7 @@ namespace BrainGames\Calc;
 use function cli\line;
 use function BrainGames\Engine\check;
 
-function run($name): bool
+function run(string $name): bool
 {
     line("What is the result of the expression?");
 

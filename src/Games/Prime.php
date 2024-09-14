@@ -5,7 +5,7 @@ namespace BrainGames\Prime;
 use function cli\line;
 use function BrainGames\Engine\check;
 
-function run($name): bool
+function run(string $name): bool
 {
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
     $questionCount = 3;

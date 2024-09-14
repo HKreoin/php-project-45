@@ -5,7 +5,7 @@ namespace BrainGames\Even;
 use function cli\line;
 use function BrainGames\Engine\check;
 
-function run($name): bool
+function run(string $name): bool
 {
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $questionCount = 3;
