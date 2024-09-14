@@ -3,7 +3,6 @@
 namespace BrainGames\Even;
 
 use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\check;
 
 function run($name): bool
@@ -14,9 +13,9 @@ function run($name): bool
         $randomNum = random_int(1, 100);
         $even = $randomNum % 2;
         $correctAnswer = $even === 0 ? 'yes' : 'no';
-        line("Question: {$randomNum}");
-        $answer = prompt("Your answer: ");
-        $check = check($answer, $correctAnswer, $name);
+
+        $check = check($randomNum, $correctAnswer);
+
         if (!$check) {
             return false;
         }

@@ -20,15 +20,15 @@ function run($name)
         $num1 = random_int(1, 100);
         $num2 = random_int(1, 100);
         $operator = $operations[random_int(0, $lastIndex)];
-        $correctAnswer = match ($operator) {
+        $correctAnswer = (string)match ($operator) {
             '+' => $num1 + $num2,
             '-' => $num1 - $num2,
             '*'=> $num1 * $num2
         };
 
-        line("Question: {$num1} {$operator} {$num2}");
-        $answer = (int)prompt("Your answer: ");
-        $check = check($answer, $correctAnswer, $name);
+        $question = "{$num1} {$operator} {$num2}";
+
+        $check = check($question, $correctAnswer);
 
         if (!$check) {
             return false;

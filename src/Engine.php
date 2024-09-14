@@ -3,9 +3,12 @@
 namespace BrainGames\Engine;
 
 use function cli\line;
+use function cli\prompt;
 
-function check($answer, $correctAnswer, $name): bool
+function check($question, $correctAnswer): bool
 {
+    line("Question: {$question}");
+    $answer = prompt("Your answer: ");
     if ($correctAnswer === $answer) {
         line("Correct!");
         return true;

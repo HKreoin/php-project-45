@@ -13,14 +13,16 @@ function run($name): bool
     for ($i = 0; $i < $questionCount; $i++) {
         $num1 = random_int(1, 100);
         $num2 = random_int(1, 100);
-        $correctAnswer = gcd($num1, $num2);
-        line("Question: {$num1} {$num2}");
-        $answer = (int)prompt("Your answer: ");
-        $check = check($answer, $correctAnswer, $name);
+        $correctAnswer = (string)gcd($num1, $num2);
+        $question = "{$num1} {$num2}";
+
+        $check = check($question, $correctAnswer);
+
         if (!$check) {
             return false;
         }
     }
+
     return true;
 }
 
