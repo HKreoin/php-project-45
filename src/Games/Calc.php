@@ -3,10 +3,9 @@
 namespace BrainGames\Calc;
 
 use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\check;
 
-function run($name)
+function run($name): bool
 {
     line("What is the correctAnswer of the expression?");
 

@@ -3,7 +3,6 @@
 namespace BrainGames\Progression;
 
 use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\check;
 
 function run($name): bool
