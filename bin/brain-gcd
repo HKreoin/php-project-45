@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function BrainGames\Cli\hello;
+use function BrainGames\GCD\run;
+use function cli\line;
+
+$name = hello();
+$win = run($name);
+line($win ? "Congratulations, {$name}!" : "Let's try again, {$name}!");
