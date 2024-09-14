@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\check;
 
-function run($name):bool
+function run($name): bool
 {
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $questionCount = 3;
@@ -17,7 +17,7 @@ function run($name):bool
         line("Question: {$randomNum}");
         $answer = prompt("Your answer: ");
         $check = check($answer, $correctAnswer, $name);
-        if(!$check) {
+        if (!$check) {
             return false;
         }
     }

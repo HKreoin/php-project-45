@@ -11,16 +11,16 @@ function run($name)
     line("What is the correctAnswer of the expression?");
 
     $operations = ['+', '-', '*'];
-    $lastIndex = count($operations) -1;
+    $lastIndex = count($operations) - 1;
 
     $questionCount = 3;
 
 
     for ($i = 0; $i < $questionCount; $i++) {
-        $num1 = random_int(1,100);
-        $num2 = random_int(1,100);
+        $num1 = random_int(1, 100);
+        $num2 = random_int(1, 100);
         $operator = $operations[random_int(0, $lastIndex)];
-        $correctAnswer = match($operator) {
+        $correctAnswer = match ($operator) {
             '+' => $num1 + $num2,
             '-' => $num1 - $num2,
             '*'=> $num1 * $num2
