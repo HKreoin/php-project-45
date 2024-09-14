@@ -14,7 +14,7 @@ function run(string $name): bool
         $even = $randomNum % 2;
         $correctAnswer = $even === 0 ? 'yes' : 'no';
 
-        $check = check($randomNum, $correctAnswer);
+        $check = check((string)$randomNum, $correctAnswer);
 
         if (!$check) {
             return false;

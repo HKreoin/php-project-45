@@ -13,7 +13,7 @@ function run(string $name): bool
     for ($i = 0; $i < $questionCount; $i++) {
         $num = rand(0, 100);
         $answer = isPrime($num) ? 'yes' : 'no';
-        $check = check($num, $answer);
+        $check = check((string)$num, $answer);
 
         if (!$check) {
             return false;
