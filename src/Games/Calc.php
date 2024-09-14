@@ -7,7 +7,7 @@ use function BrainGames\Engine\check;
 
 function run($name): bool
 {
-    line("What is the correctAnswer of the expression?");
+    line("What is the result of the expression?");
 
     $operations = ['+', '-', '*'];
     $lastIndex = count($operations) - 1;
