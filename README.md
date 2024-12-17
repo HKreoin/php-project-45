@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-git clone https://github.com/WoorNir/php-project-45.git
+git clone https://github.com/HKreoin/php-project-45.git
 
 cd php-project-45
 
